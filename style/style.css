@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vermelho: #E40914;
+    --preto: #141414; 
+}
+
+body {
+    background-color: var(--preto);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0f0f0f;
+    padding: 10px 60px;
+}
+
+.logo {
+    color: var(--vermelho);
+    font-family: 'Bebas Neue', cursive, sans-serif;
+    font-weight:200;
+    font-size: 2.5rem;
+}
+
+nav > li {
+    display: flex;
+}
+
+.menu {
+    padding: 0px 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: 1s;
+}
+
+.menu:hover {
+    color: #aaa;
+}
+
+/* MAIN */
+.main-cover {
+    background:linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url("../img/vikings-capa.jpg") ;
+    padding: 60px;
+    height: 90vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 5rem;
+
+}
+
+.synopsis {
+    width: 40%;
+    font-size: 1.5rem;
+    line-height: normal;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.658);
+}
+
+.btn {
+    display: flex;
+    margin-top: 15px;
+    
+}
+
+button {
+    padding: 12px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.219);
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:nth-child(2) {
+    background-color: rgb(109, 109, 109);
+    color: white;
+}
+
+button:nth-child(1):hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)100%);
+}
+
+button:nth-child(2):hover {
+    background: linear-gradient(rgba(109, 109, 109, 0.7), rgba(109, 109, 109, 0.7)100%);
+}
+
+button > span {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.svg-btn {
+    width: 30px;
+    margin-right: 15px;
+}
