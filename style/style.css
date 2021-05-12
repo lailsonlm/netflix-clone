@@ -204,6 +204,10 @@ section .container {
     html {
         font-size: 50%;
     }
+
+    .carousel {
+        overflow: auto;
+    }
   }
 
   @media (max-width:650px) {
@@ -245,7 +249,11 @@ section .container {
         font-size: 1.5rem;
         line-height: normal;
     }
-}
+
+    .carousel {
+        overflow:auto;
+    }
+  }
 
 @media (max-width:450px) {
     
@@ -276,9 +284,10 @@ section .container {
         height: 30px;
     }
 
-    /* fullscreen */
 
-    .menu-section.on {
+     /* fullscreen */
+
+     .menu-section.on {
         position: absolute;
         top: 0;
         left: 0;
@@ -292,6 +301,21 @@ section .container {
         justify-content: center;
         align-items: center;
 
+        z-index: 10;
+
+    }
+
+    section {
+        z-index: -1;
+    }
+
+    .carousel {
+        margin-top: 0;
+        padding: 1rem;
+    }
+
+    .carousel #section1 {
+        margin-left: 2rem;
     }
 
     .menu-section.on nav {
@@ -327,11 +351,15 @@ section .container {
         line-height: 8rem;
         display: block;
     }
-
+    /*
     section .container {
         z-index: -10;
     }
+    */
+
+    
 }
+
 
 @media (max-width:398px) {
 
