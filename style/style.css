@@ -11,26 +11,35 @@
     --preto: #141414; 
 }
 
+html {
+    /* cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
 body {
     background-color: var(--preto);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    font-size: 1.6rem;
     color: #fff;
+    height: 100vh;
 }
 
 header > .container {
+    position: fixed;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     background-color: #0f0f0f;
-    padding: 10px 60px;
+    padding: 1rem 6rem;
 }
 
 .logo {
     color: var(--vermelho);
     font-family: 'Bebas Neue', cursive, sans-serif;
     font-weight:200;
-    font-size: 2.5rem;
+    font-size: 3.7rem;
 }
 
 nav > li {
@@ -38,7 +47,7 @@ nav > li {
 }
 
 .menu {
-    padding: 0px 10px;
+    padding: 0rem 1rem;
     text-decoration: none;
     color: #fff;
     transition: 1s;
@@ -51,9 +60,10 @@ nav > li {
 /* MAIN */
 .main-cover {
     background:linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url("../img/vikings-capa.jpg") ;
-    padding: 60px;
+    padding: 6rem;
     height: 90vh;
     background-size: cover;
+    background-position: center top;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,32 +74,32 @@ nav > li {
 }
 
 .main-title {
-    font-size: 5rem;
+    font-size: 9rem;
 
 }
 
 .synopsis {
-    width: 50%;
-    font-size: 1.5rem;
+    width: 80%;
+    font-size: 2rem;
     line-height: normal;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.658);
+    text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.658);
 }
 
 .btn {
     display: flex;
-    margin-top: 15px;
+    margin-top: 1.5rem;
     
 }
 
 button {
-    padding: 12px 30px;
+    padding: 1.2rem 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
-    border-radius: 4px;
+    margin-right: 1.5rem;
+    border-radius: 0.4rem;
     border: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.219);
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.219);
     cursor: pointer;
     transition: .3s;
 }
@@ -109,12 +119,12 @@ button:nth-child(2):hover {
 
 button > span {
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 
 .svg-btn {
-    width: 30px;
-    margin-right: 15px;
+    width: 3rem;
+    margin-right: 1.5rem;
 }
 
 /* Carousel */
@@ -123,30 +133,35 @@ section .container {
 }
 
 .carousel {
-    margin-top: -40px;
+    margin-top: -4rem;
     display: flex;
     overflow:hidden;
-    padding: 20px 0;
+    padding: 2rem 0;
     scroll-behavior: smooth;
 }
 
 .carousel section {
     display: flex;
+    
+}
+
+.carousel #section1 {
+    margin-left: 6rem;
 }
 
 .item {
-    padding: 0 2px;
+    padding: 0 0.2rem;
     transition: 0.25s all;
 }
     
 .item:hover { 
-      margin: 0 40px;
+      margin: 0 4rem;
       transform: scale(1.2);
 }
 
 .carousel img {
-    width: 341px;
-    border-radius: 4px;
+    width: 34.1rem;
+    border-radius: 0.5rem;
 }
 
 .arrow__btn {
@@ -155,8 +170,8 @@ section .container {
     text-decoration: none;
     font-size: 6em;
     background:rgb(0,0,0);
-    width: 80px;
-    padding: 20px;
+    width: 8rem;
+    padding: 2rem;
     text-align: center;
     opacity: 0;
 }
@@ -167,17 +182,177 @@ section .container {
     text-decoration: none;
     font-size: 6em;
     background:rgb(0,0,0);
-    width: 80px;
-    padding: 20px;
+    width: 8rem;
+    padding: 2rem;
     text-align: center;
     opacity: 1;
 }
 
 .arrow__btn:nth-of-type(1) {
-    top:20px; bottom:0; left:0;
+    top:2rem; bottom:0; left:0;
     background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
   }
   .arrow__btn:nth-of-type(2) {
-    top:20px; bottom:0; right: 0;
+    top:2rem; bottom:0; right: 0;
     background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  }
+
+
+  /* Responsividade */
+
+  @media (max-width: 954px) {
+    html {
+        font-size: 50%;
+    }
+  }
+
+  @media (max-width:650px) {
+    button {
+        padding: 1.2rem 2rem;
+    }
+
+    button > span {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    
+    .svg-btn {
+        width: 2.5rem;
+        margin-right: 1.5rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .main-cover {
+        padding: 3rem;
+    }
+
+    header > .container {
+        padding: 1rem 3rem;
+    }
+
+    .main-cover .container {
+        width: 90%;
+    }
+    
+    .main-title {
+        font-size: 8rem;
+    
+    }
+    
+    .synopsis {
+        width: 100%;
+        font-size: 1.5rem;
+        line-height: normal;
+    }
+}
+
+@media (max-width:450px) {
+    
+    nav {
+        display: none;
+    }
+
+    .one {
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 0px auto;
+
+        transition-duration: 0.3s;
+    }
+    .two,
+    .three {
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto 0;
+
+        transition-duration: 0.3s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+    }
+
+    /* fullscreen */
+
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: var(--preto);
+
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .menu-section.on nav {
+        display: block;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate( 8px, -9px);
+    }
+
+    .menu-section.on nav li {
+        text-align: center;
+        display: block;
+    }
+
+    .menu-section.on nav ul a {
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 8rem;
+        display: block;
+    }
+
+    section .container {
+        z-index: -10;
+    }
+}
+
+@media (max-width:398px) {
+
+    .btn {
+        flex-direction: column;
+    }
+
+    button {
+        padding: 1.2rem 2rem;
+        margin-top: 10px;
+        width: 55vw;
+        
+    }
+
+    button > span {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    
+    .svg-btn {
+        width: 25px;
+        margin-right: 1.5rem;
+    }
   }
